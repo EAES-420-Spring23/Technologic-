@@ -92,17 +92,50 @@ sand_mineral_properties %>%
 sand_mineral_properties %>% 
   na.omit(hardness) %>% 
   arrange(desc(density)) %>% 
-  slice(1:18)
+  slice(5:23)
   
 ```
 
 
 ### Exercise 5
 
-Remove this text, and add your answer for Exercise 5 here.
-Add code chunks as needed.
-Don't forget to label your code chunk.
-Do not use spaces in code chunk labels.
+```{r output-density}
+
+sand_mineral_properties %>% 
+  distinct(density)
+
+```
+
+```{r count-minerals}
+
+sand_mineral_properties %>% 
+  count(minerals)
+
+```
+
+```{r new-var-density1000}
+
+sand_mineral_properties %>% 
+  summarise(density_1000 = density/1000)
+
+```
+
+```{r mean-density-summary}
+
+sand_mineral_properties %>% 
+  summarise(mean(density))
+
+
+```
+
+```{r mean-density-summary-by-location}
+
+sand_mineral_properties %>% 
+  group_by(location) %>% 
+  summarise(mean(density))
+
+```
+
 
 ### Exercise 6
 
