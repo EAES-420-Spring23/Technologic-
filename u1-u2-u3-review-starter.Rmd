@@ -22,10 +22,12 @@ solubility_hardness <- read_csv("data/solubility_hardness.csv")
 
 ### Exercise 1
 
-Remove this text, and add your answer for Exercise 1 here.
-Add code chunks as needed.
-Don't forget to label your code chunk.
-Do not use spaces in code chunk labels.
+```{r inspect-sand-minerals}
+glimpse(sites) %>% 
+  ls()
+```
+
+There are `r nrow(sites)` rows and `r ncol(sites)` columns in this dataset. Each row is stating the location and the types of minerals in each location. 
 
 ### Exercise 2
 
