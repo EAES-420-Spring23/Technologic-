@@ -31,10 +31,25 @@ There are `r nrow(sites)` rows and `r ncol(sites)` columns in this dataset. Each
 
 ### Exercise 2
 
-Remove this text, and add your answer for Exercise 2 here.
-Add code chunks as needed.
-Don't forget to label your code chunk.
-Do not use spaces in code chunk labels.
+```{r inspect-other-dataframes}
+
+glimpse(location_descriptions)
+glimpse(density)
+glimpse(solubility_hardness)
+
+ls(location_descriptions)
+ls(density)
+ls(solubility_hardness)
+
+```
+
+Location_descriptions has `r nrow(location_descriptions)` rows and `r ncol(location_descriptions)` variables.
+Density has `r nrow(density)` rows and `r ncol(density)` variables.
+Solubility_hardness has `r nrow(solubility_hardness)` rows and `r ncol(solubility_hardness)` variables.
+
+Each row in location_descriptions is a type of environment for each location site #.
+Each row in density is a specific mineral and its density.
+Each row in solubility_hardness is a specific mineral with its hardness and solubility specified.
 
 ### Exercise 3
 
