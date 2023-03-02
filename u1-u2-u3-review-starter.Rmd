@@ -52,11 +52,16 @@ Each row in density is a specific mineral and its density.
 Each row in solubility_hardness is a specific mineral with its hardness and solubility specified.
 
 ### Exercise 3
+```{r join-mineral-properties}
 
-Remove this text, and add your answer for Exercise 3 here.
-Add code chunks as needed.
-Don't forget to label your code chunk.
-Do not use spaces in code chunk labels.
+sand_mineral_density<-
+sites %>% left_join(density)
+
+sand_mineral_properties<-
+sand_mineral_density %>% left_join(solubility_hardness)
+```
+
+The output has 23 rows which is the same number as sand minerals.
 
 ### Exercise 4
 
