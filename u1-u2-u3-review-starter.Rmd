@@ -65,10 +65,37 @@ The output has 23 rows which is the same number as sand minerals.
 
 ### Exercise 4
 
-Remove this text, and add your answer for Exercise 4 here.
-Add code chunks as needed.
-Don't forget to label your code chunk.
-Do not use spaces in code chunk labels.
+```{r count-sand-mineral-observed-per-location}
+sand_mineral_properties %>%
+  count(location) 
+  
+```
+
+```{r sand-mineral-properties-location-slice-max}
+sand_mineral_properties %>% 
+  slice(1:13)
+```
+
+```{r sand-mineral-properties-density-slice-max-desc}
+sand_mineral_properties %>% 
+  arrange(desc(density)) %>% 
+  slice(1:13)
+```
+
+```{r sand-mineral-properties-location-hardness}
+sand_mineral_properties %>% 
+  select(location, hardness) %>% 
+  slice(1:18)
+```
+
+```{r sand-mineral-properties-NA-omit-desc-density}
+sand_mineral_properties %>% 
+  na.omit(hardness) %>% 
+  arrange(desc(density)) %>% 
+  slice(1:18)
+  
+```
+
 
 ### Exercise 5
 
